@@ -1,0 +1,69 @@
+CARE QUALITY COMPLIANCE
+Windows local website preview
+
+START HERE
+
+1. Right-click the ZIP file and choose "Extract All".
+   Save the extracted folder somewhere on your computer, such as Documents.
+   Do not run start.bat from inside the ZIP viewer.
+
+2. Install Node.js if you do not already have it:
+   https://nodejs.org/
+   Choose the current LTS version, version 22 or newer.
+   Leave npm and "Add to PATH" selected during installation.
+   No administrator terminal, Docker or separate web server is needed.
+
+3. Open the extracted Care-Quality-Compliance folder.
+   Double-click start.bat (Windows may display it simply as "start").
+
+4. On the first run, the launcher downloads the site's dependencies.
+   You need internet access for this step. It may take a few minutes.
+   It then prepares a stable local build of the website.
+   Preparation runs again when the website files or settings change.
+   It does not upload the website or publish anything.
+
+5. Your browser opens automatically when the website is ready.
+   The black window also shows the address, usually:
+   http://127.0.0.1:3000
+   If that port is already in use, the launcher chooses another free port.
+
+6. Keep the black window open while viewing the website.
+   To stop the preview, press Ctrl+C in that window.
+   To preview again later, double-click start.bat again.
+
+WHAT IS INCLUDED
+
+- All website pages, source files, fonts, photographs and the homepage film.
+- start.bat and the local-preview helper script.
+- A locked dependency list for installation on your Windows computer.
+- README.md with developer information and future launch instructions.
+- HOSTING-AND-EMAIL.md with GoDaddy domain and enquiry setup instructions.
+- .env.example showing optional settings. It contains no credentials.
+
+No API keys or other credentials are needed to preview the pages.
+The receiving address is recorded as Enquiry@cqc-compliance.co.uk.
+Sending is explicitly disabled. Do not send a test email yet.
+The form can be explored, but live delivery needs the sending service,
+rate limiter and explicit activation described in HOSTING-AND-EMAIL.md.
+It will show a clear message if submitted while delivery is unavailable.
+
+THIS IS A LOCAL PREVIEW
+
+The launcher listens only on your own computer (127.0.0.1).
+The address will not open on a different phone or computer.
+Nothing is published to a hosting service.
+Fonts, images and the film are local. The website does not use tracking cookies.
+
+IF SOMETHING DOES NOT OPEN
+
+- "Node.js is needed": install Node.js, close the window, and run start.bat again.
+- Installation fails: check your internet connection and retry start.bat.
+- Browser does not open: copy the address from the black window into Edge,
+  Chrome, Firefox or another modern browser.
+- After moving the project or updating Node.js, allow the launcher to reinstall
+  dependencies if requested. Keep every file and folder together.
+- This is a Next.js application. Opening an HTML file directly will not run it.
+
+The Windows batch wrapper has been checked for its commands and paths;
+the preview helper has been exercised on the build environment. Native
+Windows execution has not been tested in this Linux workspace.

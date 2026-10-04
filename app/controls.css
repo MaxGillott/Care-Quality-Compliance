@@ -1,0 +1,650 @@
+/* One action language: readable type, a clear edge and a short, physical response. */
+.button {
+  --action-fill: var(--deep);
+  --action-ink: var(--cream);
+  --action-hover: var(--accent);
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 54px;
+  max-width: 100%;
+  width: fit-content;
+  padding: 16px 27px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: var(--action-fill);
+  color: var(--action-ink);
+  font-family: var(--font-body), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.05px;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--action-hover);
+  transform: translateY(103%);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+.button:hover::before {
+  transform: translateY(0);
+}
+.button:hover {
+  color: var(--action-ink);
+  background: var(--action-fill);
+  opacity: 1;
+  transform: none;
+  box-shadow: none;
+}
+.button:active {
+  transform: translateY(1px);
+}
+.action-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+.button-small {
+  min-height: 46px;
+  font-size: 14px;
+  padding: 12px 22px;
+}
+.button-light {
+  --action-fill: var(--cream);
+  --action-ink: var(--deep);
+  --action-hover: var(--highlight);
+}
+.button-outline,
+.button-text {
+  --action-fill: transparent;
+  --action-ink: var(--deep);
+  --action-hover: transparent;
+  border-color: var(--line-strong);
+  overflow: visible;
+}
+.button-outline::before,
+.button-text::before {
+  display: none;
+}
+.button-outline:hover,
+.button-text:hover {
+  box-shadow: inset 0 -3px 0 var(--accent);
+  border-color: var(--deep);
+}
+.button-text {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid currentColor;
+  padding-inline: 0;
+}
+.button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+.button:disabled {
+  background: var(--muted);
+  color: white;
+  cursor: wait;
+  transform: none;
+}
+.button:disabled::before {
+  display: none;
+}
+.header-cta {
+  flex-shrink: 0;
+  min-width: 113px;
+}
+.site-header-cinema .header-cta {
+  --action-fill: var(--cream);
+  --action-ink: var(--deep);
+  --action-hover: var(--highlight);
+}
+.site-header-cinema .button:focus-visible,
+.cinema-hero .button:focus-visible {
+  outline-color: var(--cream);
+}
+.hero-action {
+  width: 100%;
+  min-height: 58px;
+  font-size: 16px;
+}
+.training-enquire {
+  width: 100%;
+}
+.mobile-panel .button {
+  margin-top: 25px;
+}
+.form-footer .button {
+  min-width: 140px;
+}
+.text-link,
+.film-link,
+.journey-detail-link,
+.journey-skip,
+.closing-consultation,
+.catalogue-link {
+  font-family: var(--font-body), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  gap: 0;
+  min-height: 44px;
+  width: fit-content;
+  position: relative;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+  text-decoration-color: currentColor;
+  transition: text-underline-offset 0.2s ease;
+}
+.text-link:hover,
+.film-link:hover,
+.journey-detail-link:hover,
+.journey-skip:hover,
+.closing-consultation:hover,
+.catalogue-link:hover {
+  text-underline-offset: 10px;
+  transform: none;
+  opacity: 1;
+}
+.text-link:focus-visible,
+.film-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+.desktop-nav,
+.services-menu a,
+.mobile-panel nav > a,
+.mobile-services > a {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.desktop-nav {
+  font-size: 15px;
+  gap: 32px;
+}
+.services-menu a {
+  font-size: 16px;
+  min-height: 46px;
+}
+.services-menu a:hover {
+  background: var(--paper);
+  padding-left: 6px;
+}
+.topbar {
+  background: var(--paper);
+  font-size: 10px;
+  color: var(--muted);
+}
+.cinema-scrim {
+  background: rgba(20, 37, 28, 0.64);
+}
+.cinema-content h1 {
+  font-weight: 300;
+  letter-spacing: -0.015em;
+}
+.cinema-actions {
+  min-width: 290px;
+}
+.cinema-actions .film-link {
+  margin: 12px 0 0 auto;
+  padding-inline: 0;
+  width: fit-content;
+}
+.film-control {
+  border: 1px solid #ffffff65;
+  padding: 8px 13px;
+  border-radius: 2px;
+  min-height: 38px;
+  gap: 9px;
+}
+.film-control:hover {
+  background: #ffffff16;
+}
+.editorial-intro {
+  background: var(--cream);
+}
+.editorial-principles {
+  border-bottom: 0 !important;
+  gap: 20px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+.editorial-principles > span {
+  position: relative;
+  padding-left: 0;
+}
+.editorial-services {
+  background: var(--cream);
+  padding-top: 65px;
+}
+.editorial-section-head {
+  border-top: 1px solid var(--foreground);
+  padding-top: 30px;
+  align-items: end;
+  margin-bottom: 65px;
+}
+.editorial-section-head h2 {
+  font-size: clamp(43px, 4.4vw, 65px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+.editorial-section-head > p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.practice-artwork {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--foreground);
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  --art-fill: var(--mist);
+  --art-paper: var(--cream);
+}
+.practice-artwork .art-accent {
+  stroke: var(--accent);
+  stroke-width: 5;
+}
+.practice-artwork .art-detail {
+  stroke-width: 1.2;
+}
+.practice-artwork .art-plane {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.care-journey {
+  background: var(--deep);
+}
+.journey-stage-buttons button,
+.finder-choices button,
+.workbench-tabs button,
+.workbench-tabs button span,
+.assessment-choices button,
+.explorer-tabs button,
+.course-filters button,
+.topic-options button {
+  font-family: var(--font-body), sans-serif;
+  letter-spacing: 0;
+  font-weight: 400;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.quality-hero :focus-visible,
+.care-journey :focus-visible,
+.cinema-hero :focus-visible,
+.site-header-cinema :focus-visible {
+  outline-color: var(--highlight);
+}
+.journey-stage-buttons button {
+  border-radius: 0;
+  font-size: 18px;
+}
+.journey-stage-buttons button.active::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--highlight);
+  margin-left: auto;
+}
+.journey-scroll-note::before {
+  content: "";
+  width: 1px;
+  height: 24px;
+  background: var(--highlight);
+  margin-right: 10px;
+}
+.workbench-section {
+  background: var(--pale);
+}
+.workbench-tabs {
+  border-bottom: 1px solid var(--line-strong);
+}
+.workbench-tabs button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 19px 26px;
+}
+.workbench-tabs button.active {
+  background: var(--deep);
+  color: var(--cream);
+}
+.workbench-tabs button span {
+  font-size: 19px;
+}
+.finder-choices button {
+  border-radius: 0;
+  font-size: 17px;
+  position: relative;
+  padding-right: 24px;
+}
+.finder-choices button > span {
+  border-radius: 0;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-size: 12px;
+}
+.finder-choices button.is-selected {
+  background: var(--cream);
+  color: var(--foreground);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.finder-result {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  box-shadow: 7px 7px 0 var(--art-tint);
+}
+.finder-result h4 {
+  font-size: 36px;
+  font-weight: 400;
+}
+.finder-result li > span,
+.module-number {
+  border-radius: 0;
+  background: transparent;
+}
+.learning-outline {
+  background: var(--cream);
+  box-shadow: 7px 7px 0 var(--art-tint);
+  border: 1px solid var(--border);
+}
+.topic-options button {
+  border-radius: 2px;
+  font-size: 14px;
+  min-height: 46px;
+}
+.topic-options button.selected {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: var(--cream);
+}
+.topic-options button.selected:hover:not(:disabled) {
+  background: var(--deep);
+  color: var(--cream);
+  box-shadow: inset 0 -2px 0 var(--highlight);
+}
+.team-selector select {
+  border-radius: 2px;
+  background: var(--cream);
+}
+.family-editorial-copy {
+  background: var(--accent-wash);
+}
+.family-editorial-copy .eyebrow,
+.family-editorial-copy .text-link {
+  color: var(--accent-dark);
+}
+.human-signoff {
+  font-family: var(--font-body), sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+  border-left: 2px solid var(--accent);
+  padding-left: 18px;
+}
+.closing-section {
+  background: var(--accent);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.closing-section .eyebrow,
+.closing-location,
+.closing-main p,
+.closing-consultation {
+  color: var(--cream);
+}
+.closing-top {
+  border-color: #ffffff65;
+}
+.closing-main {
+  align-items: end;
+}
+.closing-main h2 {
+  font-size: clamp(65px, 7.8vw, 119px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+}
+.closing-action {
+  margin-top: 30px;
+  min-width: 260px;
+  font-size: 16px;
+}
+.closing-consultation {
+  display: block;
+  margin-top: 19px;
+  font-size: 14px;
+}
+.closing-section .button:focus-visible {
+  outline-color: white;
+}
+.site-footer {
+  background: var(--cream);
+}
+.footer-grid h2 {
+  font-family: var(--font-body), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.footer-brand .brand-wordmark {
+  font-size: 30px;
+}
+.form-card {
+  border-radius: 3px;
+}
+.audience-option,
+.field input,
+.field textarea,
+.field select {
+  border-radius: 3px;
+}
+@media (max-width: 1200px) {
+  .header-inner {
+    gap: 25px;
+  }
+  .desktop-nav {
+    gap: 23px;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  .header-cta {
+    min-width: 102px;
+  }
+  .finder-result h4 {
+    font-size: 31px;
+  }
+  .closing-main h2 {
+    font-size: 85px;
+  }
+}
+@media (max-width: 999px) {
+  .cinema-actions {
+    min-width: 270px;
+  }
+  .hero-action {
+    font-size: 15px;
+    min-height: 54px;
+  }
+  .closing-main h2 {
+    font-size: 76px;
+  }
+  .closing-main {
+    gap: 40px;
+  }
+  .finder-result h4 {
+    font-size: 32px;
+  }
+  .workbench-tabs button {
+    padding: 17px 23px;
+  }
+}
+@media (max-width: 700px) {
+  .header-inner {
+    gap: 16px;
+  }
+  .header-cta {
+    min-width: 92px;
+    min-height: 44px;
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+  .cinema-actions {
+    min-width: 0;
+    width: 100%;
+    max-width: 360px;
+  }
+  .hero-action {
+    min-height: 54px;
+    font-size: 15px;
+  }
+  .cinema-actions .film-link {
+    font-size: 14px;
+    margin: 12px auto 0 0;
+    min-height: 42px;
+  }
+  .editorial-section-head {
+    padding-top: 23px;
+    margin-bottom: 43px;
+  }
+  .editorial-services {
+    padding-top: 30px;
+  }
+  .editorial-section-head h2 {
+    font-size: 42px;
+  }
+  .editorial-principles {
+    font-size: 16px;
+    gap: 15px;
+  }
+  .button {
+    padding: 15px 23px;
+    min-height: 51px;
+    font-size: 14px;
+  }
+  .button-small {
+    min-height: 44px;
+    padding: 11px 18px;
+  }
+  .header-cta {
+    min-height: 44px;
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+  .workbench-tabs button {
+    padding: 15px 18px;
+  }
+  .workbench-tabs button span {
+    font-size: 17px;
+  }
+  .finder-choices button {
+    font-size: 16px;
+  }
+  .finder-result,
+  .learning-outline {
+    box-shadow: 4px 4px 0 var(--art-tint);
+  }
+  .human-signoff {
+    font-size: 21px;
+  }
+  .closing-main h2 {
+    font-size: 70px;
+  }
+  .closing-action {
+    min-width: 0;
+    width: 100%;
+    max-width: 360px;
+  }
+  .closing-consultation {
+    font-size: 14px;
+  }
+  .form-footer .button {
+    min-width: 125px;
+  }
+  .text-link,
+  .journey-detail-link {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .footer-brand .brand-wordmark {
+    font-size: 27px;
+  }
+}
+@media (max-width: 380px) {
+  .header-inner {
+    gap: 11px;
+  }
+  .header-cta {
+    min-width: 82px;
+    font-size: 12px;
+    padding-inline: 13px;
+  }
+  .brand-wordmark {
+    font-size: 20px;
+  }
+  .editorial-section-head h2 {
+    font-size: 36px;
+  }
+  .closing-main h2 {
+    font-size: 60px;
+  }
+  .form-footer .button {
+    min-width: 110px;
+    font-size: 13px;
+  }
+  .hero-action {
+    font-size: 14px;
+  }
+  .workbench-tabs button span {
+    font-size: 15px;
+  }
+  .workbench-tabs button {
+    padding: 15px 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-stage-buttons button,
+  .finder-choices button,
+  .workbench-tabs button,
+  .assessment-choices button,
+  .explorer-tabs button,
+  .course-filters button,
+  .topic-options button {
+    transition: none;
+  }
+  .button,
+  .button::before,
+  .text-link,
+  .film-link,
+  .journey-detail-link,
+  .journey-skip,
+  .closing-consultation,
+  .catalogue-link {
+    transition: none;
+  }
+}

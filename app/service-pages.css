@@ -1,0 +1,3351 @@
+/* Individual practice pages share foundations, not a repeated page template. */
+.practice-page {
+  --practice-ink: var(--deep);
+  --practice-muted: var(--ink-soft);
+  color: var(--practice-ink);
+}
+.section-label {
+  display: block;
+  font-family: var(--font-body), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+  color: inherit;
+}
+.practice-breadcrumb {
+  font-size: 12px;
+  gap: 10px;
+  margin: 0 0 58px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.7;
+}
+.practice-breadcrumb a {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+.practice-breadcrumb a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.practice-hero-copy h1 {
+  font-size: clamp(65px, 5.8vw, 89px);
+  line-height: 1.04;
+  letter-spacing: -0.027em;
+  font-weight: 400;
+  margin: 25px 0 30px;
+  text-wrap: balance;
+}
+.practice-hero-copy > p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 570px;
+  margin-bottom: 30px;
+  color: var(--practice-muted);
+}
+.practice-audience {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  margin-top: 55px;
+  align-items: start;
+}
+.practice-audience > span {
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding-top: 3px;
+}
+.practice-audience p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--practice-muted);
+}
+.practice-section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 90px;
+  margin-bottom: 53px;
+}
+.practice-section-heading > .section-label {
+  grid-column: 1/-1;
+}
+.practice-section-heading h2 {
+  font-size: 55px;
+  font-weight: 400;
+  letter-spacing: -1.248px;
+  line-height: 1.1;
+}
+.practice-section-heading > p {
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 430px;
+  justify-self: end;
+  align-self: end;
+  color: var(--practice-muted);
+}
+.scope-index {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 90px;
+}
+.scope-index-heading h2 {
+  font-size: 52px;
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -1.04px;
+  margin: 24px 0;
+}
+.scope-index-heading > p {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 420px;
+}
+.scope-index > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+.scope-index > ul > li {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+  padding: 17px 0;
+  font-size: 17px;
+  align-items: baseline;
+  line-height: 1.5;
+}
+.scope-index > ul > li > span {
+  font-size: 11px;
+  min-width: 18px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.practice-note {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+.practice-note > p {
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 870px;
+  color: var(--ink-soft);
+}
+.practice-page [role="tabpanel"]:focus-visible {
+  outline: 3px solid var(--ink-soft);
+  outline-offset: 7px;
+}
+.practice-page [hidden] {
+  display: none !important;
+}
+/* Consultancy: the anatomy of a care service. */
+.consultancy-hero {
+  padding: 30px 0 0;
+}
+.consultancy-hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 75px;
+  align-items: center;
+}
+.heading-indent {
+  display: inline-block;
+  margin-left: 45px;
+}
+.service-blueprint {
+  padding: 27px 30px;
+  background: var(--paper);
+  min-width: 0;
+  border-radius: 150px 0 0 0;
+}
+.blueprint-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 10px;
+  letter-spacing: 0.9px;
+  border-bottom: 1px solid var(--border);
+  padding: 15px 0 18px;
+}
+.blueprint-top > span:first-child {
+  max-width: 200px;
+  padding-left: 20px;
+}
+.blueprint-centre {
+  position: relative;
+  height: 340px;
+  display: grid;
+  place-items: center;
+}
+.blueprint-core {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 47px;
+  line-height: 1.04;
+  letter-spacing: -0.936px;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1;
+}
+.blueprint-orbit {
+  position: absolute;
+  width: 83%;
+  height: 60%;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+}
+.orbit-one {
+  transform: rotate(-34deg);
+}
+.orbit-two {
+  transform: rotate(34deg);
+}
+.orbit-three {
+  transform: rotate(90deg);
+}
+.blueprint-label {
+  position: absolute;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  line-height: 1.3;
+  background: var(--paper);
+  padding: 8px;
+}
+.blueprint-label strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+.label-people {
+  top: 35px;
+  right: 10px;
+}
+.label-practice {
+  bottom: 50px;
+  left: -9px;
+}
+.label-governance {
+  bottom: 9px;
+  right: 16px;
+}
+.blueprint-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+.blueprint-bottom p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.consultancy-start {
+  background: var(--cream);
+}
+.consultancy-scope {
+  background: var(--paper);
+}
+.field-notes {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 105px;
+}
+.field-notes-title h2 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 24px 0 27px;
+  font-weight: 400;
+}
+.field-notes-title p {
+  font-size: 17px;
+  max-width: 360px;
+}
+.field-notes > ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.field-notes > ol > li > div {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 24px;
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
+}
+.field-notes > ol > li:last-child > div {
+  border-bottom: 1px solid var(--border);
+}
+.field-note-number {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 50px;
+  letter-spacing: -1.56px;
+  line-height: 1.1;
+  color: var(--ink-soft);
+}
+.field-notes h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.468px;
+  margin-bottom: 15px;
+}
+.field-notes li p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+/* Quality: close observation and a desk for exploring evidence. */
+.quality-hero {
+  background: var(--deep);
+  color: var(--cream);
+  padding: 30px 0 0;
+  --practice-muted: var(--mist);
+  overflow: hidden;
+}
+.quality-hero .practice-breadcrumb {
+  color: var(--paper);
+}
+.quality-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 95px;
+  align-items: center;
+}
+.quality-hero h1 {
+  font-size: clamp(65px, 5.8vw, 86px);
+}
+.quality-hero h1 > span {
+  color: var(--mist);
+}
+.quality-composition {
+  position: relative;
+  min-height: 480px;
+  margin-right: 20px;
+  padding: 25px 0;
+  display: grid;
+  place-items: center;
+}
+.quality-frame {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  min-height: 430px;
+  width: 95%;
+}
+.frame-back {
+  position: absolute;
+  transform: rotate(7deg);
+  background: var(--ink-soft);
+  inset: 26px 0 auto 22px;
+  min-height: 435px;
+}
+.frame-front {
+  position: relative;
+  background: var(--paper);
+  color: var(--deep);
+  padding: 29px 33px;
+  transform: rotate(-3deg);
+}
+.quality-frame-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 18px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+}
+.quality-equation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 30px 0 28px;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 36px;
+  letter-spacing: -0.52px;
+  line-height: 1.1;
+}
+.quality-equation svg {
+  color: var(--muted);
+}
+.quality-equation strong {
+  font-weight: 550;
+}
+.frame-front > p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.quality-footer-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line-strong);
+  margin-top: 65px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--paper);
+}
+.quality-explore {
+  background: var(--cream);
+}
+.explorer-tabs {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+.explorer-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.208px;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 23px 20px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  min-height: 80px;
+  margin-bottom: -1px;
+  transition: none;
+}
+.explorer-tabs button > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.explorer-tabs .tab-number {
+  font-family: var(--font-body), sans-serif;
+  font-size: 10px;
+  letter-spacing: 0;
+  color: inherit;
+}
+.explorer-tabs button[aria-selected="true"] {
+  background: var(--paper);
+  border-bottom-color: var(--ink-soft);
+  color: var(--deep);
+}
+.explorer-tabs button:hover {
+  background: var(--paper);
+}
+.explorer-tabs button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline-offset: 3px;
+}
+.evidence-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  padding-top: 48px;
+}
+.evidence-questions h3 {
+  font-size: 43px;
+  line-height: 1.1;
+  letter-spacing: -0.832px;
+  font-weight: 400;
+  max-width: 540px;
+  margin: 25px 0 24px;
+}
+.evidence-questions > p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.evidence-questions ol {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+}
+.evidence-questions li {
+  display: flex;
+  gap: 21px;
+  border-top: 1px solid var(--mist);
+  padding: 17px 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.evidence-questions li > span {
+  font-size: 11px;
+  min-width: 20px;
+  padding-top: 2px;
+  color: var(--ink-soft);
+}
+.evidence-document {
+  position: relative;
+  padding: 29px 32px;
+  background: var(--paper);
+  border: 1px solid var(--mist);
+  box-shadow: 8px 8px 0 var(--mist);
+}
+.document-masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+}
+.evidence-document dl {
+  margin: 0;
+}
+.evidence-document dl > div {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border);
+}
+.evidence-document dt {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.312px;
+  margin-bottom: 11px;
+  line-height: 1.3;
+}
+.evidence-document dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+.evidence-document .document-note {
+  font-size: 12px;
+  margin: 20px 0 22px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.quality-ledger {
+  background: var(--paper);
+}
+.quality-change {
+  background: var(--mist);
+  padding: 85px 0;
+}
+.quality-change-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 95px;
+}
+.quality-change-grid > .section-label {
+  grid-column: 1/-1;
+}
+.quality-change-grid > h2 {
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: -1.404px;
+  line-height: 1.07;
+}
+.quality-change-note {
+  display: flex;
+  gap: 23px;
+  border-top: 1px solid var(--line-strong);
+  padding: 22px 0;
+}
+.quality-change-note > span {
+  font-size: 11px;
+  min-width: 20px;
+  padding-top: 7px;
+}
+.quality-change-note h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.468px;
+  margin-bottom: 13px;
+}
+.quality-change-note p {
+  font-size: 16px;
+  color: var(--ink-soft);
+}
+/* Procurement: a continuous route from capability to delivery. */
+.procurement-hero {
+  background: var(--paper);
+  padding: 30px 0 0;
+}
+.procurement-opening {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  align-items: end;
+  gap: 80px;
+  margin-top: 24px;
+}
+.procurement-opening > * {
+  min-width: 0;
+}
+.procurement-opening h1 {
+  font-size: clamp(64px, 5.8vw, 90px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.0286em;
+}
+.opportunity-word {
+  display: inline-block;
+  border-bottom: 2px solid var(--line-strong);
+  padding-bottom: 5px;
+}
+.procurement-opening p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin-bottom: 25px;
+}
+.capability-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  margin-top: 68px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 30px 0;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 43px;
+  letter-spacing: -0.936px;
+  line-height: 1.15;
+  color: var(--ink-soft);
+}
+.capability-line > svg {
+  flex: 1;
+  max-width: 65px;
+  min-width: 30px;
+  stroke-width: 1;
+  width: 55px;
+  height: 40px;
+}
+.procurement-hero .practice-audience {
+  border-top: 0;
+  margin-top: 0;
+}
+.procurement-route {
+  background: var(--cream);
+}
+.tender-explorer .explorer-tabs {
+  border-top: 0;
+}
+.tender-explorer .explorer-tabs button {
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 17px 17px 25px;
+  font-size: 22px;
+  gap: 16px;
+  min-height: 118px;
+}
+.tender-explorer .explorer-tabs button > svg {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  width: 18px;
+}
+.tender-explorer .tab-number {
+  font-size: 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+}
+.tender-explorer button[aria-selected="true"] .tab-number {
+  background: var(--deep);
+  color: #fff;
+  border-color: var(--deep);
+}
+.tender-panel {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 90px;
+  padding-top: 55px;
+}
+.tender-chapter {
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+}
+.chapter-figure {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 115px;
+  letter-spacing: -3.64px;
+  line-height: 0.96;
+  font-weight: 400;
+  color: var(--muted);
+  min-width: 108px;
+}
+.tender-chapter > div {
+  padding-top: 7px;
+}
+.tender-chapter h3 {
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.78px;
+  margin: 25px 0 23px;
+}
+.tender-chapter p {
+  font-size: 17px;
+  line-height: 1.85;
+}
+.tender-brief {
+  border-left: 1px solid var(--border);
+  padding: 5px 0 5px 38px;
+}
+.tender-brief h4 {
+  font-size: 29px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.52px;
+  margin: 22px 0;
+}
+.tender-brief ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tender-brief li {
+  display: flex;
+  gap: 13px;
+  font-size: 15px;
+  padding: 12px 0;
+  border-top: 1px solid var(--mist);
+  line-height: 1.6;
+}
+.tender-brief li > svg {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.tender-support {
+  margin: 20px 0 26px;
+}
+.tender-support > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.tender-support > p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 7px;
+}
+.procurement-scope {
+  background: var(--paper);
+}
+.procurement-principle {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  align-items: start;
+  gap: 45px;
+  border-top: 1px solid var(--border);
+  margin-top: 70px;
+  padding-top: 38px;
+}
+.procurement-principle > span {
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  max-width: 220px;
+}
+.procurement-principle > p {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 30px;
+  line-height: 1.4;
+  color: var(--deep);
+  letter-spacing: -0.39px;
+}
+.procurement-principle > div {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+/* Training: a learning studio and browsable syllabus. */
+.training-hero {
+  background: var(--paper);
+  padding: 30px 0 0;
+}
+.training-opening {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 95px;
+  align-items: center;
+}
+.training-opening h1 {
+  font-size: clamp(65px, 5.6vw, 85px);
+}
+.training-opening h1 > span {
+  color: var(--ink-soft);
+}
+.learning-composition {
+  position: relative;
+  padding: 15px 0 20px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.learning-sheet {
+  padding: 26px 32px 30px;
+  border: 1px solid var(--border);
+  position: relative;
+  min-height: 150px;
+}
+.learning-sheet > span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  margin-bottom: 15px;
+}
+.learning-sheet > strong {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 43px;
+  font-weight: 400;
+  letter-spacing: -0.78px;
+  line-height: 1.1;
+  display: block;
+}
+.learning-sheet > p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+.sheet-knowledge {
+  background: var(--cream);
+  transform: rotate(-3deg);
+  margin-right: 45px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.sheet-confidence {
+  background: var(--mist);
+  transform: rotate(3deg);
+  margin-left: 30px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.sheet-confidence > p {
+  color: var(--ink-soft);
+}
+.sheet-practice {
+  background: var(--deep);
+  color: var(--cream);
+  margin-right: 20px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+.sheet-practice > p {
+  color: var(--mist);
+}
+.sheet-practice > svg {
+  position: absolute;
+  bottom: 28px;
+  right: 29px;
+}
+.training-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 40px;
+  border-top: 1px solid var(--border);
+  margin-top: 58px;
+  padding: 25px 0;
+}
+.training-caption > span {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.training-caption > p {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.course-section {
+  background: var(--cream);
+}
+.course-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 28px;
+}
+.course-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.course-filters button {
+  padding: 11px 19px;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  transition: none;
+}
+.course-filters button[aria-pressed="true"] {
+  background: var(--deep);
+  color: #fff;
+  border-color: var(--deep);
+}
+.course-filters button:hover:not([aria-pressed="true"]) {
+  background: var(--paper);
+}
+.course-count {
+  font-size: 13px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.course-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+  align-items: start;
+}
+.course-row {
+  border-top: 1px solid var(--border);
+}
+.course-row summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 24px 0;
+  min-height: 111px;
+  color: var(--deep);
+}
+.course-row summary::-webkit-details-marker {
+  display: none;
+}
+.course-number {
+  font-size: 11px;
+  min-width: 17px;
+  align-self: flex-start;
+  padding-top: 4px;
+  color: var(--ink-soft);
+}
+.course-name {
+  display: block;
+  flex: 1;
+}
+.course-name > span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--ink-soft);
+}
+.course-name strong {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.364px;
+}
+.course-row summary > svg {
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+.course-row[open] summary > svg {
+  transform: rotate(45deg);
+}
+.course-description {
+  padding: 0 30px 29px 40px;
+}
+.course-description > p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.course-description .text-link {
+  font-size: 15px;
+}
+.catalogue-to-plan {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: fit-content;
+  border-bottom: 1px solid var(--muted);
+  min-height: 54px;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 35px;
+  line-height: 1.5;
+  padding: 8px 0;
+}
+.catalogue-to-plan:hover > svg {
+  transform: translateY(3px);
+}
+.training-builder {
+  background: var(--paper);
+}
+.training-builder .learning-outline {
+  background: var(--cream);
+}
+.training-builder .topic-options button {
+  background: var(--cream);
+}
+.training-builder .topic-options button.selected {
+  background: var(--mist);
+}
+.learning-method {
+  background: var(--cream);
+}
+.learning-method-rows {
+  margin-top: 35px;
+}
+.learning-method-rows > div > div {
+  display: grid;
+  grid-template-columns: 65px 1fr 1fr;
+  gap: 35px 50px;
+  align-items: start;
+  padding: 31px 0;
+  border-top: 1px solid var(--border);
+}
+.learning-method-rows > div > div > span {
+  font-size: 12px;
+  padding-top: 9px;
+}
+.learning-method-rows h2 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.728px;
+  max-width: 430px;
+}
+.learning-method-rows p {
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 460px;
+}
+/* Assessments: a considered folio and a person-centred evidence process. */
+.assessment-hero {
+  background: var(--paper);
+  padding: 30px 0 0;
+}
+.assessment-opening {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+}
+.assessment-lead h1 {
+  font-size: clamp(62px, 5.4vw, 83px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.0286em;
+  margin: 25px 0 35px;
+}
+.perspective-diagram {
+  padding: 25px 0;
+  min-width: 0;
+}
+.perspective-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+}
+.perspective-circles {
+  position: relative;
+  height: 320px;
+  display: grid;
+  place-items: center;
+}
+.perspective-circles > span {
+  position: absolute;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+  width: 66%;
+  aspect-ratio: 1;
+  left: 0;
+}
+.perspective-circles > span:nth-child(2) {
+  left: auto;
+  right: 0;
+  background: color-mix(in srgb, var(--border) 25.1%, transparent);
+}
+.perspective-circles > strong {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.78px;
+  text-align: center;
+  position: relative;
+}
+.perspective-diagram > p {
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--ink-soft);
+}
+.assessment-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 100px;
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+  margin-top: 50px;
+}
+.assessment-intro > span {
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  line-height: 1.8;
+}
+.assessment-intro > p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.assessment-purpose {
+  background: var(--cream);
+}
+.assessment-outline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 95px;
+}
+.assessment-choices h3 {
+  font-size: 51px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1.04px;
+  margin: 22px 0 34px;
+}
+.assessment-choices [role="group"] {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+.assessment-choices button {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  text-align: left;
+  padding: 25px 5px;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--deep);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  min-height: 82px;
+}
+.assessment-choices button > span {
+  font-family: var(--font-body), sans-serif;
+  font-size: 11px;
+  min-width: 30px;
+}
+.assessment-choices button > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.assessment-choices button[aria-pressed="true"] {
+  background: var(--paper);
+  padding-inline: 17px;
+}
+.assessment-choices button:hover {
+  background: var(--paper);
+}
+.assessment-choices > p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 24px;
+  max-width: 440px;
+}
+.report-folio {
+  padding: 33px 37px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  position: relative;
+  box-shadow: 9px 9px 0 var(--mist);
+}
+.folio-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  line-height: 1.7;
+}
+.report-folio h4 {
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.728px;
+  margin: 25px 0 20px;
+}
+.report-folio > p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.report-folio ol {
+  padding: 0;
+  list-style: none;
+  margin: 26px 0 28px;
+}
+.report-folio li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding: 13px 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.report-folio li > span {
+  font-size: 10px;
+  min-width: 17px;
+  color: var(--ink-soft);
+}
+.assessment-process {
+  background: var(--deep);
+  color: var(--paper);
+  --practice-muted: var(--mist);
+}
+.assessment-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.assessment-process-grid h2 {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.3px;
+  margin: 22px 0 27px;
+}
+.assessment-process-grid > div > p {
+  font-size: 16px;
+  color: var(--mist);
+  line-height: 1.8;
+  max-width: 470px;
+}
+.assessment-process-grid ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.assessment-process-grid li {
+  position: relative;
+  display: flex;
+  gap: 27px;
+  padding: 0 0 43px;
+}
+.assessment-process-grid li:before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  bottom: 0;
+  width: 1px;
+  background: var(--line-strong);
+  left: 22px;
+}
+.assessment-process-grid li:last-child:before {
+  display: none;
+}
+.assessment-step {
+  min-width: 45px;
+  height: 45px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  color: var(--mist);
+}
+.assessment-process-grid li > div {
+  padding-top: 6px;
+}
+.assessment-process-grid h3 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.364px;
+  margin-bottom: 17px;
+}
+.assessment-process-grid li p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--mist);
+}
+.assessment-scope {
+  background: var(--cream);
+}
+/* Families: an open letter, useful questions and room to be heard. */
+.family-page-hero {
+  background: var(--cream);
+  padding: 30px 0 72px;
+}
+.family-opening {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 82px;
+  align-items: center;
+}
+.family-opening h1 {
+  font-size: clamp(60px, 5.4vw, 83px);
+}
+.family-opening h1 > span {
+  color: var(--ink-soft);
+}
+.family-opening .practice-hero-copy > p {
+  font-size: 18px;
+}
+.family-reassurance {
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-top: 22px;
+  max-width: 420px;
+}
+.family-photo {
+  position: relative;
+  height: 620px;
+  overflow: hidden;
+  border-radius: 210px 210px 6px 6px;
+  isolation: isolate;
+}
+.family-photo > img {
+  object-fit: cover;
+  object-position: 42% center;
+}
+.family-photo-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 21px 24px;
+  background: color-mix(in srgb, var(--cream) 92.9%, transparent);
+  font-family: var(--font-heading), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.104px;
+  color: var(--deep);
+}
+.family-questions {
+  background: var(--cream);
+}
+.family-question-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 100px;
+}
+.family-question-grid h2 {
+  font-size: 59px;
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -1.248px;
+  margin: 23px 0 26px;
+}
+.family-question-grid > div > p {
+  font-size: 18px;
+  line-height: 1.85;
+  max-width: 410px;
+}
+.family-question-grid .family-quiet-note {
+  font-size: 15px;
+  max-width: 360px;
+  line-height: 1.8;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--mist);
+  color: var(--ink-soft);
+}
+.concern-accordion {
+  border-top: 1px solid var(--border);
+}
+.concern-accordion details {
+  border-bottom: 1px solid var(--border);
+}
+.concern-accordion summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.338px;
+  padding: 24px 0;
+  cursor: pointer;
+}
+.concern-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.concern-accordion summary > span {
+  flex: 1;
+}
+.concern-accordion summary > svg {
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.concern-accordion details[open] summary > svg {
+  transform: rotate(45deg);
+}
+.concern-accordion details > div {
+  padding: 0 29px 25px 0;
+}
+.concern-accordion details p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.concern-accordion ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+.concern-accordion li {
+  padding: 6px 11px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.family-conversation {
+  background: var(--paper);
+  padding: 80px 0;
+}
+.conversation-letter {
+  background: var(--cream);
+  padding: 55px 58px;
+  border: 1px solid var(--border);
+  border-radius: 0 70px 0 0;
+}
+.conversation-letter h2 {
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.884px;
+  margin: 23px 0 36px;
+  max-width: 1000px;
+}
+.conversation-letter-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  padding-top: 35px;
+  border-top: 1px solid var(--border);
+}
+.conversation-letter-body > div > p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.conversation-letter-body ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.conversation-letter-body li {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 29px;
+}
+.conversation-letter-body li > span {
+  font-size: 11px;
+  min-width: 20px;
+  padding-top: 6px;
+}
+.conversation-letter-body h3 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.416px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.conversation-letter-body li p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.family-urgent {
+  padding: 53px 0;
+  background: var(--cream);
+  border-bottom: 1px solid var(--mist);
+}
+.family-urgent > .container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+.family-urgent h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.52px;
+  margin-top: 17px;
+}
+.family-urgent p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+.family-urgent a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .consultancy-hero-grid,
+  .quality-hero-grid,
+  .training-opening,
+  .family-opening {
+    gap: 55px;
+  }
+  .practice-hero-copy h1 {
+    font-size: 70px;
+  }
+  .heading-indent {
+    margin-left: 28px;
+  }
+  .blueprint-core {
+    font-size: 39px;
+  }
+  .blueprint-centre {
+    height: 310px;
+  }
+  .blueprint-top {
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+  .blueprint-top > span:first-child {
+    padding-left: 12px;
+  }
+  .blueprint-label strong {
+    font-size: 13px;
+  }
+  .blueprint-label {
+    gap: 6px;
+    font-size: 9px;
+  }
+  .label-people {
+    right: -10px;
+    top: 38px;
+  }
+  .label-governance {
+    right: -9px;
+  }
+  .quality-equation {
+    font-size: 31px;
+  }
+  .quality-composition {
+    margin-right: 5px;
+  }
+  .frame-front {
+    padding: 25px;
+  }
+  .frame-back {
+    left: 16px;
+  }
+  .scope-index {
+    gap: 60px;
+  }
+  .scope-index-heading h2 {
+    font-size: 45px;
+  }
+  .field-notes {
+    gap: 60px;
+  }
+  .field-notes-title h2 {
+    font-size: 56px;
+  }
+  .practice-section-heading {
+    gap: 20px 55px;
+  }
+  .practice-section-heading h2 {
+    font-size: 49px;
+  }
+  .procurement-opening {
+    gap: 55px;
+    grid-template-columns: 1.25fr 0.85fr;
+  }
+  .procurement-opening h1 {
+    font-size: 71px;
+  }
+  .procurement-opening p {
+    font-size: 16px;
+  }
+  .capability-line {
+    font-size: 38px;
+  }
+  .tender-panel {
+    gap: 50px;
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  .tender-chapter {
+    gap: 24px;
+  }
+  .chapter-figure {
+    font-size: 96px;
+    min-width: 87px;
+  }
+  .tender-chapter h3 {
+    font-size: 34px;
+  }
+  .tender-brief {
+    padding-left: 27px;
+  }
+  .explorer-tabs button {
+    font-size: 17px;
+    padding-inline: 15px;
+    gap: 10px;
+  }
+  .evidence-panel {
+    gap: 48px;
+  }
+  .evidence-questions h3 {
+    font-size: 38px;
+  }
+  .evidence-document {
+    padding: 25px;
+  }
+  .quality-change-grid {
+    gap: 25px 60px;
+  }
+  .quality-change-grid > h2 {
+    font-size: 56px;
+  }
+  .learning-sheet {
+    padding: 23px 26px 27px;
+  }
+  .learning-sheet > strong {
+    font-size: 37px;
+  }
+  .course-name strong {
+    font-size: 24px;
+  }
+  .course-index {
+    gap: 0 42px;
+  }
+  .assessment-opening {
+    gap: 55px;
+    grid-template-columns: 1.25fr 0.85fr;
+  }
+  .assessment-lead h1 {
+    font-size: 67px;
+  }
+  .perspective-top {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+  .perspective-circles {
+    height: 280px;
+  }
+  .perspective-circles > strong {
+    font-size: 35px;
+  }
+  .assessment-outline {
+    gap: 65px;
+  }
+  .assessment-choices h3 {
+    font-size: 45px;
+  }
+  .report-folio {
+    padding: 28px;
+  }
+  .report-folio h4 {
+    font-size: 34px;
+  }
+  .assessment-process-grid {
+    gap: 60px;
+  }
+  .assessment-process-grid h2 {
+    font-size: 52px;
+  }
+  .family-opening h1 {
+    font-size: 68px;
+  }
+  .family-photo {
+    height: 570px;
+  }
+  .family-question-grid {
+    gap: 60px;
+  }
+  .family-question-grid h2 {
+    font-size: 52px;
+  }
+  .conversation-letter {
+    padding: 45px;
+  }
+  .conversation-letter-body {
+    gap: 60px;
+  }
+  .conversation-letter h2 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 999px) {
+  .practice-breadcrumb {
+    margin-bottom: 38px;
+    font-size: 11px;
+  }
+  .practice-hero-copy h1 {
+    font-size: 57px;
+  }
+  .practice-hero-copy > p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .consultancy-hero-grid {
+    gap: 35px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .service-blueprint {
+    padding: 24px 20px;
+    border-radius: 100px 0 0 0;
+  }
+  .blueprint-top {
+    font-size: 8px;
+    letter-spacing: 0.4px;
+    padding-bottom: 14px;
+  }
+  .blueprint-top > span:first-child {
+    padding-left: 7px;
+    max-width: 155px;
+  }
+  .blueprint-centre {
+    height: 295px;
+  }
+  .blueprint-core {
+    font-size: 35px;
+  }
+  .blueprint-label {
+    padding: 6px;
+  }
+  .blueprint-label strong {
+    font-size: 12px;
+  }
+  .label-governance {
+    right: -8px;
+    bottom: 8px;
+  }
+  .label-people {
+    top: 34px;
+    right: -9px;
+  }
+  .label-practice {
+    bottom: 55px;
+    left: -13px;
+  }
+  .blueprint-bottom p {
+    font-size: 13px;
+  }
+  .practice-audience {
+    gap: 40px;
+    grid-template-columns: 0.8fr 1.2fr;
+    margin-top: 45px;
+  }
+  .practice-audience p {
+    font-size: 14px;
+  }
+  .practice-section-heading h2 {
+    font-size: 44px;
+    letter-spacing: -0.884px;
+  }
+  .practice-section-heading > p {
+    font-size: 16px;
+  }
+  .scope-index {
+    gap: 40px;
+  }
+  .scope-index-heading h2 {
+    font-size: 39px;
+    letter-spacing: -0.78px;
+  }
+  .scope-index-heading > p {
+    font-size: 16px;
+  }
+  .scope-index > ul > li {
+    font-size: 16px;
+    gap: 18px;
+  }
+  .field-notes {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+  }
+  .field-notes-title h2 {
+    font-size: 48px;
+  }
+  .field-notes > ol > li > div {
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+  }
+  .field-note-number {
+    font-size: 37px;
+    letter-spacing: -1.04px;
+  }
+  .field-notes h3 {
+    font-size: 26px;
+  }
+  .field-notes li p {
+    font-size: 16px;
+  }
+  .quality-hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+  }
+  .quality-hero h1 {
+    font-size: 59px;
+  }
+  .quality-frame {
+    min-height: 375px;
+  }
+  .quality-composition {
+    min-height: 420px;
+    margin-right: 9px;
+  }
+  .quality-frame-label {
+    font-size: 9px;
+  }
+  .frame-front {
+    padding: 23px 20px;
+  }
+  .frame-back {
+    min-height: 380px;
+    left: 12px;
+  }
+  .quality-equation {
+    font-size: 27px;
+    gap: 13px;
+    padding-block: 25px;
+  }
+  .quality-equation > svg {
+    height: 21px;
+  }
+  .quality-footer-line {
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 45px;
+  }
+  .evidence-panel {
+    gap: 35px;
+  }
+  .evidence-questions h3 {
+    font-size: 33px;
+  }
+  .evidence-questions > p,
+  .evidence-questions li {
+    font-size: 16px;
+  }
+  .evidence-document {
+    padding: 23px;
+  }
+  .evidence-document dd {
+    font-size: 15px;
+  }
+  .evidence-document dt {
+    font-size: 21px;
+  }
+  .explorer-tabs button {
+    font-size: 16px;
+    padding-inline: 12px;
+    gap: 8px;
+    min-height: 72px;
+  }
+  .explorer-tabs .tab-number {
+    font-size: 9px;
+  }
+  .explorer-tabs button > svg {
+    width: 15px;
+  }
+  .quality-change-grid {
+    gap: 25px 40px;
+  }
+  .quality-change-grid > h2 {
+    font-size: 50px;
+  }
+  .quality-change-note {
+    gap: 16px;
+  }
+  .quality-change-note h3 {
+    font-size: 25px;
+  }
+  .quality-change-note p {
+    font-size: 15px;
+  }
+  .procurement-opening {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .procurement-opening h1 {
+    font-size: 81px;
+  }
+  .procurement-opening > div {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+  .procurement-opening > div > p {
+    font-size: 17px;
+    flex: 1;
+    max-width: 460px;
+    margin-bottom: 0;
+  }
+  .capability-line {
+    font-size: 34px;
+    gap: 25px;
+    margin-top: 45px;
+  }
+  .tender-explorer .explorer-tabs button {
+    font-size: 19px;
+    padding: 15px 14px 20px;
+    min-height: 110px;
+  }
+  .tender-explorer .explorer-tabs button > svg {
+    right: 12px;
+    width: 15px;
+  }
+  .tender-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+  .tender-chapter {
+    display: block;
+  }
+  .chapter-figure {
+    font-size: 83px;
+    display: block;
+    margin-bottom: 27px;
+    letter-spacing: -2.6px;
+  }
+  .tender-chapter h3 {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  .tender-chapter p {
+    font-size: 16px;
+  }
+  .tender-brief {
+    padding-left: 25px;
+  }
+  .tender-brief h4 {
+    font-size: 28px;
+  }
+  .procurement-principle {
+    gap: 30px;
+    grid-template-columns: 0.65fr 1.35fr 1fr;
+  }
+  .procurement-principle > p {
+    font-size: 27px;
+  }
+  .procurement-principle > div {
+    font-size: 13px;
+  }
+  .procurement-principle > span {
+    font-size: 10px;
+  }
+  .training-opening {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+  }
+  .training-opening h1 {
+    font-size: 57px;
+  }
+  .learning-sheet {
+    padding: 22px 23px;
+    min-height: 135px;
+  }
+  .learning-sheet > strong {
+    font-size: 31px;
+  }
+  .learning-sheet > p {
+    font-size: 13px;
+  }
+  .learning-sheet > span {
+    font-size: 9px;
+  }
+  .sheet-knowledge {
+    margin-right: 26px;
+  }
+  .sheet-confidence {
+    margin-left: 15px;
+  }
+  .sheet-practice {
+    margin-right: 7px;
+  }
+  .learning-composition {
+    min-height: 435px;
+  }
+  .sheet-practice > svg {
+    width: 23px;
+    right: 23px;
+    bottom: 23px;
+  }
+  .training-caption {
+    gap: 25px;
+    font-size: 10px;
+    align-items: flex-start;
+  }
+  .training-caption > span {
+    font-size: 10px;
+  }
+  .training-caption > p {
+    font-size: 13px;
+    max-width: 320px;
+  }
+  .course-name strong {
+    font-size: 22px;
+  }
+  .course-row summary {
+    gap: 17px;
+    padding: 21px 0;
+    min-height: 110px;
+  }
+  .course-index {
+    gap: 0 35px;
+  }
+  .course-description {
+    padding-left: 34px;
+    padding-right: 12px;
+  }
+  .course-filters button {
+    font-size: 13px;
+    padding: 11px 15px;
+  }
+  .course-count {
+    font-size: 12px;
+  }
+  .learning-method-rows > div > div {
+    grid-template-columns: 40px 1fr 1fr;
+    gap: 25px;
+  }
+  .learning-method-rows h2 {
+    font-size: 33px;
+  }
+  .learning-method-rows p {
+    font-size: 16px;
+  }
+  .assessment-opening {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+  }
+  .assessment-lead h1 {
+    font-size: 56px;
+  }
+  .perspective-top {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    gap: 15px;
+    line-height: 1.6;
+  }
+  .perspective-circles {
+    height: 260px;
+  }
+  .perspective-circles > strong {
+    font-size: 30px;
+    letter-spacing: -0.52px;
+  }
+  .perspective-diagram > p {
+    font-size: 14px;
+  }
+  .assessment-intro {
+    gap: 60px;
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  .assessment-intro > p {
+    font-size: 16px;
+  }
+  .assessment-intro > span {
+    font-size: 10px;
+  }
+  .assessment-outline {
+    gap: 40px;
+  }
+  .assessment-choices h3 {
+    font-size: 38px;
+    letter-spacing: -0.78px;
+  }
+  .assessment-choices button {
+    font-size: 18px;
+    gap: 12px;
+    padding-block: 23px;
+  }
+  .assessment-choices button > span {
+    min-width: 22px;
+  }
+  .report-folio {
+    padding: 24px;
+  }
+  .report-folio h4 {
+    font-size: 30px;
+    letter-spacing: -0.52px;
+  }
+  .report-folio p {
+    font-size: 15px;
+  }
+  .folio-heading {
+    font-size: 9px;
+  }
+  .assessment-process-grid {
+    gap: 40px;
+  }
+  .assessment-process-grid h2 {
+    font-size: 43px;
+    letter-spacing: -0.832px;
+  }
+  .assessment-process-grid > div > p {
+    font-size: 15px;
+  }
+  .assessment-process-grid li {
+    gap: 21px;
+  }
+  .assessment-process-grid h3 {
+    font-size: 25px;
+  }
+  .assessment-process-grid li p {
+    font-size: 15px;
+  }
+  .family-opening {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 37px;
+  }
+  .family-opening h1 {
+    font-size: 56px;
+  }
+  .family-opening .practice-hero-copy > p {
+    font-size: 16px;
+  }
+  .family-photo {
+    height: 540px;
+    border-radius: 150px 150px 3px 3px;
+  }
+  .family-photo-caption {
+    font-size: 15px;
+    padding: 17px;
+    left: 13px;
+    right: 13px;
+    bottom: 15px;
+  }
+  .family-reassurance {
+    font-size: 11px;
+  }
+  .family-question-grid {
+    gap: 40px;
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  .family-question-grid h2 {
+    font-size: 46px;
+    letter-spacing: -0.832px;
+  }
+  .family-question-grid > div > p {
+    font-size: 17px;
+  }
+  .concern-accordion summary {
+    font-size: 21px;
+    gap: 20px;
+  }
+  .concern-accordion details > div {
+    padding-right: 5px;
+  }
+  .concern-accordion details p {
+    font-size: 16px;
+  }
+  .conversation-letter {
+    padding: 37px;
+  }
+  .conversation-letter h2 {
+    font-size: 36px;
+  }
+  .conversation-letter-body {
+    gap: 40px;
+  }
+  .conversation-letter-body > div > p {
+    font-size: 16px;
+  }
+  .conversation-letter-body h3 {
+    font-size: 24px;
+  }
+  .conversation-letter-body li {
+    gap: 17px;
+  }
+  .conversation-letter-body li p {
+    font-size: 15px;
+  }
+  .family-urgent > .container {
+    gap: 50px;
+  }
+  .family-urgent h2 {
+    font-size: 27px;
+  }
+  .family-urgent p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 760px) {
+  .practice-breadcrumb {
+    margin-bottom: 32px;
+    font-size: 11px;
+    gap: 8px;
+  }
+  .consultancy-hero,
+  .quality-hero,
+  .procurement-hero,
+  .training-hero,
+  .assessment-hero,
+  .family-page-hero {
+    padding-top: 22px;
+  }
+  .consultancy-hero-grid,
+  .quality-hero-grid,
+  .training-opening,
+  .family-opening {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .practice-hero-copy h1 {
+    font-size: clamp(49px, 9vw, 69px);
+    line-height: 1.05;
+    letter-spacing: -0.0244em;
+    margin: 22px 0 25px;
+  }
+  .practice-hero-copy > p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 580px;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .heading-indent {
+    margin-left: 30px;
+  }
+  .service-blueprint {
+    max-width: 520px;
+    width: 100%;
+    justify-self: center;
+    padding: 24px 26px;
+    border-radius: 115px 0 0 0;
+  }
+  .blueprint-top {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+  .blueprint-top > span:first-child {
+    max-width: 220px;
+    padding-left: 15px;
+  }
+  .blueprint-centre {
+    height: 335px;
+  }
+  .blueprint-core {
+    font-size: 44px;
+  }
+  .blueprint-label {
+    font-size: 10px;
+    padding: 8px;
+  }
+  .blueprint-label strong {
+    font-size: 14px;
+  }
+  .label-people {
+    right: 0;
+    top: 39px;
+  }
+  .label-practice {
+    left: -10px;
+    bottom: 49px;
+  }
+  .label-governance {
+    right: 0;
+    bottom: 6px;
+  }
+  .blueprint-bottom p {
+    font-size: 14px;
+  }
+  .practice-audience {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px 0;
+    margin-top: 35px;
+  }
+  .practice-audience > span {
+    font-size: 10px;
+  }
+  .practice-audience > p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .practice-section-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+  .practice-section-heading > .section-label {
+    grid-column: auto;
+  }
+  .practice-section-heading h2 {
+    font-size: 42px;
+    line-height: 1.12;
+    letter-spacing: -0.936px;
+  }
+  .practice-section-heading > p {
+    font-size: 17px;
+    justify-self: start;
+    max-width: 520px;
+    line-height: 1.8;
+  }
+  .scope-index {
+    grid-template-columns: 1fr;
+    gap: 31px;
+  }
+  .scope-index-heading h2 {
+    font-size: 40px;
+    line-height: 1.12;
+    margin: 20px 0 22px;
+    letter-spacing: -0.884px;
+    max-width: 500px;
+  }
+  .scope-index-heading > p {
+    font-size: 17px;
+    max-width: 550px;
+    line-height: 1.8;
+  }
+  .scope-index > ul > li {
+    font-size: 17px;
+    gap: 22px;
+    padding: 16px 0;
+  }
+  .practice-note {
+    margin-top: 29px;
+    padding-top: 22px;
+  }
+  .practice-note > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .field-notes {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .field-notes-title h2 {
+    font-size: 45px;
+    line-height: 1.06;
+    margin: 20px 0 22px;
+  }
+  .field-notes-title p {
+    max-width: 510px;
+    font-size: 17px;
+  }
+  .field-notes > ol > li > div {
+    grid-template-columns: 46px 1fr;
+    gap: 23px;
+    padding: 26px 0;
+  }
+  .field-note-number {
+    font-size: 39px;
+  }
+  .field-notes h3 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+  .field-notes li p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .quality-hero h1 {
+    font-size: clamp(48px, 9vw, 69px);
+  }
+  .quality-composition {
+    width: min(440px, 92%);
+    justify-self: center;
+    min-height: 415px;
+    margin: 0 9px 0 0;
+    padding: 15px 0;
+  }
+  .frame-back {
+    min-height: 378px;
+    top: 17px;
+    left: 17px;
+  }
+  .quality-frame {
+    min-height: 378px;
+  }
+  .frame-front {
+    padding: 25px 27px;
+  }
+  .quality-equation {
+    font-size: 33px;
+    gap: 11px;
+    padding-block: 23px;
+  }
+  .quality-frame-label {
+    font-size: 10px;
+  }
+  .frame-front > p {
+    font-size: 14px;
+  }
+  .quality-footer-line {
+    gap: 20px;
+    padding: 24px 0;
+    margin-top: 29px;
+    flex-wrap: wrap;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+  .evidence-panel {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 30px;
+  }
+  .evidence-questions h3 {
+    font-size: 35px;
+    line-height: 1.14;
+    margin: 21px 0 20px;
+    max-width: 560px;
+  }
+  .evidence-questions > p,
+  .evidence-questions li {
+    font-size: 17px;
+  }
+  .evidence-document {
+    padding: 25px;
+    margin-right: 7px;
+    box-shadow: 6px 6px 0 var(--mist);
+  }
+  .document-masthead {
+    font-size: 10px;
+  }
+  .evidence-document dt {
+    font-size: 23px;
+  }
+  .evidence-document dd {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .evidence-document .document-note {
+    font-size: 13px;
+  }
+  .explorer-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 0;
+    scroll-padding-inline: 2px;
+    overscroll-behavior-x: contain;
+  }
+  .explorer-tabs button {
+    min-width: 155px;
+    flex: 1;
+    min-height: 75px;
+    gap: 10px;
+    padding: 19px 14px;
+    font-size: 17px;
+  }
+  .explorer-tabs .tab-number {
+    font-size: 10px;
+  }
+  .explorer-tabs button > svg {
+    width: 15px;
+  }
+  .quality-change {
+    padding: 61px 0;
+  }
+  .quality-change-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .quality-change-grid > .section-label {
+    grid-column: auto;
+  }
+  .quality-change-grid > h2 {
+    font-size: 49px;
+    line-height: 1.08;
+    margin-bottom: 5px;
+  }
+  .quality-change-note {
+    gap: 21px;
+  }
+  .quality-change-note h3 {
+    font-size: 27px;
+  }
+  .quality-change-note p {
+    font-size: 16px;
+  }
+  .procurement-opening {
+    gap: 27px;
+    margin-top: 24px;
+  }
+  .procurement-opening h1 {
+    font-size: clamp(47px, 9vw, 71px);
+    line-height: 1.07;
+    letter-spacing: -0.026em;
+  }
+  .opportunity-word {
+    padding-bottom: 3px;
+  }
+  .procurement-opening > div {
+    display: block;
+  }
+  .procurement-opening > div > p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 25px;
+  }
+  .capability-line {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1.15fr;
+    text-align: center;
+    font-size: clamp(16px, 4.3vw, 26px);
+    letter-spacing: -0.52px;
+    gap: 5px;
+    padding: 23px 0;
+    margin-top: 36px;
+  }
+  .capability-line > svg {
+    width: 25px;
+    min-width: 20px;
+    max-width: 35px;
+    height: 26px;
+    flex: 1;
+  }
+  .tender-explorer .explorer-tabs button {
+    min-width: 132px;
+    font-size: 19px;
+    min-height: 107px;
+    padding: 13px 16px 18px;
+    gap: 12px;
+  }
+  .tender-explorer .explorer-tabs button > svg {
+    top: 21px;
+    right: 16px;
+  }
+  .tender-explorer .tab-number {
+    font-size: 11px;
+    width: 31px;
+    height: 31px;
+  }
+  .tender-panel {
+    grid-template-columns: 1fr;
+    gap: 31px;
+    padding-top: 34px;
+  }
+  .tender-chapter {
+    display: flex;
+    gap: 24px;
+  }
+  .chapter-figure {
+    font-size: 76px;
+    min-width: 75px;
+    letter-spacing: -2.08px;
+    line-height: 1.06;
+    margin: 0;
+  }
+  .tender-chapter > div {
+    padding-top: 4px;
+  }
+  .tender-chapter h3 {
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.676px;
+    margin: 20px 0;
+  }
+  .tender-chapter p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .tender-brief {
+    padding: 26px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+  }
+  .tender-brief h4 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .tender-brief li {
+    font-size: 16px;
+  }
+  .tender-support > p {
+    font-size: 15px;
+  }
+  .procurement-principle {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    margin-top: 45px;
+    padding-top: 28px;
+  }
+  .procurement-principle > span {
+    font-size: 10px;
+    max-width: 320px;
+  }
+  .procurement-principle > p {
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.52px;
+  }
+  .procurement-principle > div {
+    font-size: 15px;
+    max-width: 490px;
+  }
+  .training-opening h1 {
+    font-size: clamp(49px, 9vw, 69px);
+  }
+  .learning-composition {
+    max-width: 460px;
+    justify-self: center;
+    width: 95%;
+    padding: 10px 0 17px;
+    min-height: 440px;
+  }
+  .learning-sheet {
+    padding: 24px 27px;
+    min-height: 148px;
+  }
+  .learning-sheet > strong {
+    font-size: 39px;
+  }
+  .learning-sheet > p {
+    font-size: 14px;
+  }
+  .learning-sheet > span {
+    font-size: 10px;
+  }
+  .sheet-knowledge {
+    margin-right: 29px;
+  }
+  .sheet-confidence {
+    margin-left: 25px;
+  }
+  .sheet-practice {
+    margin-right: 14px;
+  }
+  .sheet-practice > svg {
+    bottom: 24px;
+    right: 25px;
+    width: 29px;
+    height: 29px;
+  }
+  .training-caption {
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 30px;
+    padding: 23px 0;
+  }
+  .training-caption > span {
+    font-size: 10px;
+  }
+  .training-caption > p {
+    font-size: 15px;
+    max-width: 510px;
+  }
+  .course-toolbar {
+    display: block;
+    padding-bottom: 23px;
+  }
+  .course-filters {
+    gap: 7px;
+  }
+  .course-filters button {
+    font-size: 13px;
+    padding: 10px 14px;
+    min-height: 44px;
+  }
+  .course-count {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .course-index {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .course-row summary {
+    gap: 22px;
+    min-height: 105px;
+    padding: 22px 0;
+  }
+  .course-name strong {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  .course-name > span {
+    font-size: 10px;
+  }
+  .course-number {
+    font-size: 11px;
+  }
+  .course-description {
+    padding-left: 39px;
+    padding-bottom: 25px;
+    padding-right: 17px;
+  }
+  .course-description > p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .course-description .text-link {
+    font-size: 16px;
+  }
+  .catalogue-to-plan {
+    font-size: 17px;
+    gap: 21px;
+    line-height: 1.5;
+    margin-top: 26px;
+  }
+  .catalogue-to-plan > svg {
+    flex-shrink: 0;
+  }
+  .learning-method-rows {
+    margin-top: 27px;
+  }
+  .learning-method-rows > div > div {
+    grid-template-columns: 33px 1fr;
+    gap: 18px 23px;
+    padding: 25px 0;
+  }
+  .learning-method-rows h2 {
+    font-size: 31px;
+    line-height: 1.2;
+    letter-spacing: -0.52px;
+  }
+  .learning-method-rows p {
+    grid-column: 2;
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.8;
+  }
+  .assessment-opening {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .assessment-lead h1 {
+    font-size: clamp(46px, 9vw, 70px);
+    line-height: 1.08;
+    letter-spacing: -0.026em;
+    margin: 22px 0 29px;
+  }
+  .perspective-diagram {
+    width: min(470px, 100%);
+    justify-self: center;
+    padding: 20px 0;
+  }
+  .perspective-top {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    gap: 20px;
+    padding-bottom: 19px;
+  }
+  .perspective-circles {
+    height: 320px;
+  }
+  .perspective-circles > strong {
+    font-size: 39px;
+    line-height: 1.1;
+    letter-spacing: -0.78px;
+  }
+  .perspective-diagram > p {
+    font-size: 16px;
+  }
+  .assessment-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 22px;
+    padding: 27px 0;
+  }
+  .assessment-intro > span {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+  .assessment-intro > p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .assessment-outline {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .assessment-choices h3 {
+    font-size: 43px;
+    margin: 22px 0 27px;
+    letter-spacing: -0.884px;
+    line-height: 1.12;
+  }
+  .assessment-choices button {
+    font-size: 20px;
+    gap: 18px;
+    padding-block: 23px;
+    min-height: 80px;
+  }
+  .assessment-choices > p {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 540px;
+  }
+  .report-folio {
+    padding: 26px;
+    margin-right: 7px;
+    box-shadow: 6px 6px 0 var(--mist);
+  }
+  .folio-heading {
+    font-size: 10px;
+    gap: 20px;
+    line-height: 1.6;
+  }
+  .report-folio h4 {
+    font-size: 33px;
+    line-height: 1.13;
+  }
+  .report-folio > p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .report-folio li {
+    font-size: 16px;
+    line-height: 1.7;
+    gap: 15px;
+  }
+  .report-folio li > span {
+    font-size: 11px;
+  }
+  .assessment-process-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .assessment-process-grid h2 {
+    font-size: 46px;
+    line-height: 1.1;
+    letter-spacing: -0.936px;
+    margin: 22px 0 26px;
+  }
+  .assessment-process-grid > div > p {
+    font-size: 16px;
+    max-width: 560px;
+  }
+  .assessment-process-grid h3 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+  .assessment-process-grid li p {
+    font-size: 17px;
+  }
+  .assessment-process-grid li {
+    gap: 24px;
+  }
+  .family-page-hero {
+    padding-bottom: 50px;
+  }
+  .family-opening h1 {
+    font-size: clamp(49px, 9vw, 69px);
+    line-height: 1.06;
+  }
+  .family-opening .practice-hero-copy > p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .family-reassurance {
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 450px;
+  }
+  .family-photo {
+    height: 490px;
+    max-width: 480px;
+    width: 100%;
+    justify-self: center;
+    border-radius: 190px 190px 4px 4px;
+  }
+  .family-photo-caption {
+    font-size: 18px;
+    padding: 20px 24px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .family-question-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .family-question-grid h2 {
+    font-size: 46px;
+    line-height: 1.1;
+    letter-spacing: -0.936px;
+  }
+  .family-question-grid > div > p {
+    font-size: 18px;
+    max-width: 570px;
+  }
+  .family-question-grid .family-quiet-note {
+    max-width: 550px;
+    font-size: 16px;
+    margin-top: 25px;
+    padding-top: 21px;
+  }
+  .concern-accordion summary {
+    font-size: 23px;
+    line-height: 1.4;
+    gap: 22px;
+    padding: 23px 0;
+  }
+  .concern-accordion details p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .concern-accordion details > div {
+    padding-right: 9px;
+    padding-bottom: 25px;
+  }
+  .concern-accordion li {
+    font-size: 13px;
+    padding: 6px 11px;
+  }
+  .family-conversation {
+    padding: 55px 0;
+  }
+  .conversation-letter {
+    padding: 29px 24px;
+    border-radius: 0 45px 0 0;
+  }
+  .conversation-letter h2 {
+    font-size: 35px;
+    line-height: 1.18;
+    letter-spacing: -0.676px;
+    margin: 22px 0 29px;
+  }
+  .conversation-letter-body {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 25px;
+  }
+  .conversation-letter-body > div > p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .conversation-letter-body li {
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+  .conversation-letter-body h3 {
+    font-size: 25px;
+    line-height: 1.3;
+    letter-spacing: -0.312px;
+  }
+  .conversation-letter-body li p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .family-urgent {
+    padding: 44px 0;
+  }
+  .family-urgent > .container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .family-urgent h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-top: 17px;
+  }
+  .family-urgent p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+}
+@media (max-width: 400px) {
+  .practice-hero-copy h1,
+  .family-opening h1,
+  .training-opening h1 {
+    font-size: 47px;
+  }
+  .consultancy-hero .heading-indent {
+    margin-left: 18px;
+  }
+  .practice-hero-copy > p {
+    font-size: 16px;
+  }
+  .service-blueprint {
+    padding: 22px 21px;
+  }
+  .blueprint-top {
+    font-size: 9px;
+  }
+  .blueprint-top > span:first-child {
+    padding-left: 13px;
+    max-width: 188px;
+  }
+  .blueprint-centre {
+    height: 305px;
+  }
+  .blueprint-core {
+    font-size: 38px;
+  }
+  .blueprint-label strong {
+    font-size: 12px;
+  }
+  .blueprint-label {
+    font-size: 9px;
+    padding: 6px;
+    gap: 6px;
+  }
+  .label-people {
+    top: 36px;
+    right: -4px;
+  }
+  .label-practice {
+    left: -8px;
+    bottom: 49px;
+  }
+  .label-governance {
+    right: -2px;
+    bottom: 6px;
+  }
+  .practice-section-heading h2 {
+    font-size: 38px;
+    letter-spacing: -0.78px;
+  }
+  .scope-index-heading h2 {
+    font-size: 37px;
+  }
+  .quality-hero h1 {
+    font-size: 47px;
+  }
+  .quality-composition {
+    width: 94%;
+    margin-right: 12px;
+  }
+  .frame-front {
+    padding: 23px;
+  }
+  .quality-equation {
+    font-size: 29px;
+  }
+  .quality-footer-line {
+    gap: 13px;
+    letter-spacing: 0.6px;
+    font-size: 9px;
+  }
+  .evidence-document {
+    padding: 22px;
+  }
+  .evidence-questions h3 {
+    font-size: 31px;
+  }
+  .evidence-document dt {
+    font-size: 22px;
+  }
+  .quality-change-grid > h2 {
+    font-size: 44px;
+  }
+  .procurement-opening h1 {
+    font-size: 46px;
+  }
+  .capability-line {
+    font-size: 16px;
+    gap: 5px;
+    letter-spacing: -0.312px;
+  }
+  .capability-line > svg {
+    min-width: 14px;
+    max-width: 14px;
+    height: 23px;
+  }
+  .tender-chapter {
+    display: block;
+  }
+  .chapter-figure {
+    font-size: 71px;
+    margin-bottom: 21px;
+  }
+  .tender-chapter h3 {
+    font-size: 32px;
+  }
+  .tender-brief {
+    padding: 22px;
+  }
+  .learning-sheet {
+    padding: 22px 24px;
+  }
+  .learning-sheet > strong {
+    font-size: 35px;
+  }
+  .learning-sheet > p {
+    font-size: 13px;
+  }
+  .sheet-practice > svg {
+    right: 21px;
+    bottom: 21px;
+    width: 24px;
+  }
+  .course-filters button {
+    font-size: 12px;
+    padding-inline: 12px;
+  }
+  .course-name strong {
+    font-size: 24px;
+  }
+  .assessment-lead h1 {
+    font-size: 45px;
+  }
+  .perspective-top {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+  .perspective-circles {
+    height: 280px;
+  }
+  .perspective-circles > strong {
+    font-size: 34px;
+  }
+  .assessment-choices h3 {
+    font-size: 39px;
+  }
+  .assessment-choices button {
+    font-size: 18px;
+    gap: 13px;
+  }
+  .report-folio {
+    padding: 22px;
+  }
+  .report-folio h4 {
+    font-size: 31px;
+  }
+  .folio-heading {
+    font-size: 9px;
+  }
+  .assessment-process-grid h2 {
+    font-size: 41px;
+  }
+  .family-opening .practice-hero-copy > p {
+    font-size: 17px;
+  }
+  .family-photo {
+    height: 440px;
+  }
+  .family-photo-caption {
+    font-size: 17px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 19px;
+  }
+  .family-question-grid h2 {
+    font-size: 42px;
+  }
+  .concern-accordion summary {
+    font-size: 22px;
+  }
+  .conversation-letter {
+    padding: 27px 21px;
+  }
+  .conversation-letter h2 {
+    font-size: 31px;
+  }
+  .practice-breadcrumb {
+    font-size: 10px;
+    gap: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .course-row summary > svg,
+  .concern-accordion summary > svg,
+  .catalogue-to-plan > svg {
+    transition: none;
+    transform: none;
+  }
+}
+/* The same colour vocabulary, with a different composition for each practice. */
+.service-blueprint {
+  background: var(--pale);
+  border-radius: 0;
+  overflow: visible;
+}
+.blueprint-orbit {
+  border-color: var(--accent);
+  border-radius: 18%;
+}
+.blueprint-label {
+  background: var(--pale);
+  font-family: var(--font-body), sans-serif;
+}
+.blueprint-label strong {
+  font-weight: 400;
+}
+.blueprint-top,
+.blueprint-bottom {
+  border-color: var(--border);
+}
+.quality-frame.frame-front {
+  background: var(--pale);
+}
+.quality-frame.frame-back {
+  background: var(--accent);
+}
+.quality-hero h1 > span {
+  color: var(--highlight);
+}
+.quality-footer-line {
+  border-color: var(--line-strong);
+}
+.quality-change {
+  background: var(--accent-wash);
+}
+.evidence-document {
+  background: var(--paper);
+  box-shadow: 6px 6px 0 var(--border);
+}
+.document-note {
+  color: var(--muted);
+}
+.explorer-tabs button {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+.explorer-tabs button[aria-selected="true"] {
+  background: var(--pale);
+  border-bottom-color: var(--accent);
+}
+.explorer-tabs button[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+.procurement-hero {
+  background: var(--pale);
+}
+.opportunity-word {
+  border-color: var(--accent);
+}
+.capability-line {
+  position: relative;
+  border-top-color: var(--border);
+  border-bottom-color: var(--border);
+  color: var(--foreground);
+}
+.capability-trace {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+}
+.tender-explorer .tab-number {
+  border-radius: 0;
+  background: transparent;
+  border-color: var(--line-strong);
+  font-size: 13px;
+}
+.tender-explorer button[aria-selected="true"] .tab-number {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: var(--cream);
+}
+.tender-chapter {
+  background: var(--accent-wash);
+}
+.chapter-figure {
+  color: var(--accent);
+}
+.training-hero {
+  background: var(--accent-wash);
+}
+.training-opening h1 > span {
+  color: var(--accent-dark);
+}
+.sheet-confidence {
+  background: var(--pale);
+}
+.sheet-practice {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.sheet-practice > p {
+  color: white;
+}
+.learning-sheet {
+  border-color: var(--line-strong);
+}
+.training-caption {
+  border-color: var(--line-strong);
+}
+.course-filters button {
+  border-radius: 2px;
+  font-family: var(--font-body), sans-serif;
+}
+.course-filters button[aria-pressed="true"] {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: var(--cream);
+}
+.course-name strong {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+}
+.assessment-hero {
+  background: var(--pale);
+}
+.perspective-circles > span {
+  border-color: var(--accent);
+}
+.assessment-choices button {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+}
+.assessment-choices button[aria-pressed="true"] {
+  background: var(--pale);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.report-folio {
+  background: var(--cream);
+  box-shadow: 6px 6px 0 var(--mist);
+}
+.family-hero {
+  background: var(--cream);
+}
+.family-hero h1 > span {
+  color: var(--accent-dark);
+}
+.family-photo-caption {
+  background: var(--accent-wash);
+}
+.practice-section-heading h2,
+.scope-index h2 {
+  letter-spacing: -0.035em;
+}
+@media (max-width: 760px) {
+  .evidence-document,
+  .report-folio {
+    box-shadow: 4px 4px 0 var(--mist);
+  }
+  .service-blueprint {
+    overflow: hidden;
+  }
+}

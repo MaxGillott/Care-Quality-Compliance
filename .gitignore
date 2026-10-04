@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+.skills/
+test-results/
+playwright-report/
+scratch/
+shared/
+*.zip
+.vercel/

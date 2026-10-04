@@ -1,0 +1,334 @@
+.index {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+.folioColumn {
+  position: sticky;
+  top: 40px;
+}
+.folio {
+  padding: 25px 28px 24px;
+  background: var(--pale);
+  color: var(--foreground);
+  position: relative;
+  --art-fill: var(--art-tint);
+  --art-paper: var(--cream);
+}
+.folio::before,
+.folio::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  border: 1px solid var(--foreground);
+}
+.folio::before {
+  top: -8px;
+  left: -8px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.folio::after {
+  bottom: -8px;
+  right: -8px;
+  border-top: 0;
+  border-left: 0;
+}
+.folioHead,
+.folioFoot {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+}
+.folioHead {
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--border);
+}
+.illustration {
+  margin: 10px -10px;
+  animation: folio-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.folioCaption {
+  font-family: var(--font-heading), sans-serif;
+  font-size: clamp(27px, 2.6vw, 39px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 27px !important;
+  color: var(--foreground) !important;
+}
+.folioFoot {
+  font-size: 11px;
+  letter-spacing: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 17px;
+}
+.indexNote {
+  font-size: 13px !important;
+  color: var(--muted);
+  line-height: 1.6 !important;
+  margin: 25px 0 0 2px !important;
+}
+.entries {
+  border-top: 1px solid var(--foreground);
+}
+.entry {
+  display: grid;
+  grid-template-columns: 30px 1fr 62px;
+  gap: 24px;
+  align-items: start;
+  position: relative;
+  padding: 31px 0 32px;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+  isolation: isolate;
+  scroll-margin-top: 30px;
+}
+.entry::before {
+  content: "";
+  position: absolute;
+  inset: 0 -17px;
+  background: var(--paper);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+.entry:hover::before,
+.entry:focus-visible::before {
+  transform: scaleY(1);
+  transform-origin: 50% 0;
+}
+.entry:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+.number {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+  margin-top: 9px;
+  color: var(--muted);
+}
+.number::before {
+  content: "[";
+  margin-right: 3px;
+}
+.number::after {
+  content: "]";
+  margin-left: 3px;
+}
+.entryCopy h3 {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: clamp(26px, 2.55vw, 38px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  margin: 0 0 13px;
+  text-wrap: balance;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.entryCopy p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 390px;
+  color: var(--muted);
+  margin: 0;
+}
+.entry:hover .entryCopy h3,
+.entry:focus-visible .entryCopy h3 {
+  transform: translateX(5px);
+}
+.explore {
+  align-self: center;
+  font-size: 12px;
+  line-height: 1.5;
+  position: relative;
+  padding-block: 5px;
+}
+.exploreLine {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0.45);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease;
+  margin-top: 4px;
+}
+.entry:hover .exploreLine,
+.entry:focus-visible .exploreLine {
+  transform: scaleX(1);
+}
+.entry[data-active="true"] .number {
+  color: var(--accent);
+}
+@keyframes folio-enter {
+  from {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  to {
+    transform: translateY(0) rotate(0);
+  }
+}
+.illustration :global(.art-accent) {
+  stroke-dasharray: 700;
+  animation: trace-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes trace-in {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (min-width: 1700px) {
+  .entryCopy h3 {
+    font-size: 39px;
+  }
+}
+@media (max-width: 1100px) {
+  .index {
+    gap: 45px;
+    grid-template-columns: 0.78fr 1.22fr;
+  }
+  .folio {
+    padding: 22px;
+  }
+  .entry {
+    gap: 18px;
+    grid-template-columns: 25px 1fr 50px;
+    padding-block: 27px;
+  }
+  .entryCopy h3 {
+    font-size: 29px;
+  }
+  .folioCaption {
+    font-size: 28px;
+  }
+  .folioHead,
+  .folioFoot {
+    font-size: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .index {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .folioColumn {
+    position: relative;
+    top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 24px;
+  }
+  .folio {
+    padding: 18px;
+  }
+  .folioHead {
+    font-size: 9px;
+    gap: 4px;
+    padding-bottom: 10px;
+  }
+  .folioCaption {
+    font-size: 21px !important;
+    margin-bottom: 0 !important;
+  }
+  .folioFoot {
+    display: none;
+  }
+  .illustration {
+    margin: 0 -6px;
+  }
+  .indexNote {
+    padding-bottom: 16px;
+    font-size: 14px !important;
+  }
+  .entry {
+    grid-template-columns: 25px 1fr 47px;
+    gap: 14px;
+    padding-block: 27px;
+  }
+  .entryCopy h3 {
+    font-size: 30px;
+    max-width: 410px;
+  }
+  .entryCopy p {
+    font-size: 15px;
+  }
+  .explore {
+    font-size: 11px;
+  }
+  .entry::before {
+    inset: 0 -10px;
+  }
+  .number {
+    font-size: 11px;
+    margin-top: 7px;
+  }
+}
+@media (max-width: 400px) {
+  .folioColumn {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 20px;
+  }
+  .folio {
+    padding: 15px;
+  }
+  .folioHead {
+    font-size: 8px;
+  }
+  .folioCaption {
+    font-size: 20px !important;
+  }
+  .indexNote {
+    font-size: 12px !important;
+  }
+  .entry {
+    grid-template-columns: 23px 1fr;
+    gap: 12px;
+    padding-block: 25px;
+  }
+  .entryCopy h3 {
+    font-size: 27px;
+  }
+  .entryCopy p {
+    font-size: 15px;
+  }
+  .explore {
+    grid-column: 2;
+    justify-self: start;
+    font-size: 12px;
+    padding: 0;
+    margin-top: 3px;
+  }
+  .number {
+    margin-top: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .illustration :global(.art-accent) {
+    animation: none;
+  }
+  .illustration {
+    animation: none;
+  }
+  .entry::before,
+  .entryCopy h3,
+  .exploreLine {
+    transition: none;
+  }
+  .entry:hover .entryCopy h3,
+  .entry:focus-visible .entryCopy h3 {
+    transform: none;
+  }
+}
